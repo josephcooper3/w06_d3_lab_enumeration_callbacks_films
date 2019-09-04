@@ -16,9 +16,9 @@ Cinema.prototype.findByTitle = function(title) {
   return foundFilm
 }
 
-Cinema.prototype.findByGenre = function(genre) {
+Cinema.prototype.filmsByProperty = function(property, value) {
   const foundFilms = this.films.filter(function(film){
-    return film.genre === genre
+    return film[property] === value
   })
   return foundFilms
 }
