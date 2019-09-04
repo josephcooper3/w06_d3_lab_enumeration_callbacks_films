@@ -3,10 +3,7 @@ const Cinema = function (films) {
 };
 
 Cinema.prototype.getAllFilmTitles = function(){
-  const filmTitles = this.films.map (function(film) {
-    return film.title
-  })
-  return filmTitles
+  return this.films.map (film => film.title)
 }
 
 Cinema.prototype.findByTitle = function(title) {
